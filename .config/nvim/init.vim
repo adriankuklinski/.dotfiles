@@ -8,11 +8,14 @@ set scrolloff=8
 set guicursor=
 
 call plug#begin('~/.vim/plugged')
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
-colorscheme desert
+set termguicolors
+let ayucolor="dark"
+colorscheme ayu
 
 let mapleader = " "
 
