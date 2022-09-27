@@ -23,4 +23,7 @@ nnoremap <leader>pv :Vex<CR>
 nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>pf :Files<CR>
+nnoremap <C-k> :cnext<CR>
+nnoremap <C-j> :cprev<CR>
+nnoremap <C-E> :copen<CR>
 
