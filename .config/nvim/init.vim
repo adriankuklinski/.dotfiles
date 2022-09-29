@@ -6,19 +6,8 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set scrolloff=8
 set guicursor=
-
-call plug#begin('~/.vim/plugged')
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'ayu-theme/ayu-vim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
-Plug 'kyazdani42/nvim-web-devicons'
-call plug#end()
-
 set termguicolors
-let ayucolor="dark"
+
 colorscheme ayu
 
 let mapleader = " "
@@ -44,4 +33,6 @@ nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<CR>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<CR>
 nnoremap <leader>en <cmd>lua require('telescope.builtin').find_files({cwd='~/.config/nvim'})<CR>
 
+lua require('adriankuklinski.plugins')
 lua require('adriankuklinski.telescope')
+lua require('adriankuklinski.lsp')
