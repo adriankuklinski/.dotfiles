@@ -1,13 +1,18 @@
-require("lspconfig").gopls.setup{
-    on_attach = function()
-        vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
-        vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer=0})
-    end
-}
+require("lspconfig").tsserver.setup({})
 
-require("lspconfig").rust_analyzer.setup{
-    on_attach = function()
-        vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
-    end
-}
-require("lspconfig").tsserver.setup{}
+require("lspconfig").gopls.setup({
+	cmd = { "gopls", "serve" },
+	settings = {
+		gopls = {
+			analyses = {
+				unusedparams = true,
+			},
+			staticcheck = true,
+		},
+	},
+})
+
+require("lspconfig").rust_analyzer.setup({
+	cmd = { "rustup", "run", "nightly", "rust-analyzer" },
+})
+

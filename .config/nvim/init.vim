@@ -8,7 +8,8 @@ set scrolloff=8
 set guicursor=
 set termguicolors
 
-colorscheme ayu
+syntax on
+colorscheme tokyonight-night 
 
 let mapleader = " "
 
@@ -36,3 +37,5 @@ nnoremap <leader>en <cmd>lua require('telescope.builtin').find_files({cwd='~/.co
 lua require('adriankuklinski.plugins')
 lua require('adriankuklinski.telescope')
 lua require('adriankuklinski.lsp')
+lua require('adriankuklinski.completion')
+lua require('adriankuklinski.treesitter')
