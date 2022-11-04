@@ -54,6 +54,9 @@ return require('packer').startup(function(use)
     -- Go
     use {'fatih/vim-go', run =  ':GoUpdateBinaries'}
 
+    -- Rust
+    use 'rust-lang/rust.vim'
+
     if packer_bootstrap then
         require('packer').sync()
     end
