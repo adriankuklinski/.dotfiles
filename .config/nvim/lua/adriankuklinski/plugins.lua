@@ -57,7 +57,11 @@ return require('packer').startup(function(use)
     -- Rust
     use 'rust-lang/rust.vim'
 
+    -- Git
+    use 'tpope/vim-fugitive'
+
     if packer_bootstrap then
         require('packer').sync()
     end
 end)
+

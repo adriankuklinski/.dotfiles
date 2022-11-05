@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["rust.vim"] = {
+    loaded = true,
+    path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/rust.vim",
+    url = "https://github.com/rust-lang/rust.vim"
+  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
@@ -158,6 +163,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-go"] = {
     loaded = true,
