@@ -21,4 +21,8 @@ nnoremap("<leader>d", "\"_d")
 vnoremap("<leader>d", "\"_d")
 vnoremap("<leader>d", "\"_d")
 
+nnoremap("<leader>x", ":!chmod +x %<CR>")
+
+nnoremap("<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
 inoremap("<C-c>", "<Esc>")
