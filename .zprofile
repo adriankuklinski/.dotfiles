@@ -10,7 +10,7 @@ function _run-tmux-sessionizer() {
 }
 
 
-function _run-tmux-sessionizer() {
+function _run-cht-sh() {
     zle push-input
     BUFFER="cht.sh"
     zle accept-line
