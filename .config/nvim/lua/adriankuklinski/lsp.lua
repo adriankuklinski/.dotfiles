@@ -1,31 +1,24 @@
-require("lspconfig").tsserver.setup({
-    on_attach = function()
-        vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
-        vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer=0})
-    end
+local lsp = require('lsp-zero')
+
+lsp.ensure_installed({
+    'html',
+    'cssls',
+    'tsserver',
+    'intelephense',
+    'rust_analyzer',
+    'sumneko_lua',
+    'go_pls'
 })
 
-require("lspconfig").gopls.setup({
-	cmd = { "gopls", "serve" },
-	settings = {
-		gopls = {
-			analyses = {
-				unusedparams = true,
-			},
-			staticcheck = true,
-		},
-	},
-    on_attach = function()
-        vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
-        vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer=0})
-    end
+lsp.set_preferences({
+    suggest_lsp_servers = true,
+    setup_servers_on_start = true,
+    set_lsp_keymaps = true,
+    configure_diagnostics = true,
+    cmp_capabilities = true,
+    manage_nvim_cmp = true,
+    call_servers = 'local',
+    sign_icons = {}
 })
 
-require("lspconfig").rust_analyzer.setup({
-	cmd = { "rustup", "run", "nightly", "rust-analyzer" },
-    on_attach = function()
-        vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
-        vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer=0})
-    end
-})
-
+lsp.setup()

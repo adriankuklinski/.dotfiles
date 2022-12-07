@@ -14,10 +14,47 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    -- Color scheme
-    use 'folke/tokyonight.nvim'
+    -- Color Scheme
+    use({
+        'rose-pine/neovim',
+        as = 'rose-pine',
+        config = function()
+            vim.cmd('colorscheme rose-pine')
+        end
+    })
+
+    use {
+        "folke/zen-mode.nvim",
+        config = function()
+            require("zen-mode").setup {
+              -- your configuration comes here
+              -- or leave it empty to use the default settings
+              -- refer to the configuration section below
+            }
+        end
+    }
+
+    -- LSP Support
+    use 'VonHeikemen/lsp-zero.nvim'
+    use 'neovim/nvim-lspconfig'
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
+    use 'onsails/lspkind-nvim'
+
+    -- Autocompletion
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'saadparwaiz1/cmp_luasnip'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-nvim-lua'
+
+    -- Snippets
+    use 'L3MON4D3/LuaSnip'
+    use 'rafamadriz/friendly-snippets'
 
     -- Telescope
+    use 'ThePrimeagen/harpoon'
     use 'nvim-lua/plenary.nvim'
     use 'nvim-telescope/telescope.nvim'
     use {
@@ -31,34 +68,12 @@ return require('packer').startup(function(use)
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     }
 
-    -- Prime's nvim package
-    use 'ThePrimeagen/harpoon'
-
-    -- LSP
-    use 'neovim/nvim-lspconfig'
-    use"onsails/lspkind-nvim"
-
-    -- Completion
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-nvim-lua'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-cmdline'
-    use 'hrsh7th/nvim-cmp'
-
-    use 'L3MON4D3/LuaSnip'
-    use 'saadparwaiz1/cmp_luasnip'
-
-    -- Sql
-
-    -- Go
-    use {'fatih/vim-go', run =  ':GoUpdateBinaries'}
-
-    -- Rust
-    use 'rust-lang/rust.vim'
-
     -- Git
     use 'tpope/vim-fugitive'
+
+    -- Language Support
+    use 'rust-lang/rust.vim'
+    use {'fatih/vim-go', run =  ':GoUpdateBinaries'}
 
     if packer_bootstrap then
         require('packer').sync()
