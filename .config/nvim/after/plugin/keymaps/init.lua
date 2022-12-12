@@ -30,3 +30,5 @@ nnoremap("n", "nzzzv")
 nnoremap("N", "Nzzzv")
 
 inoremap("<C-c>", "<Esc>")
+
+nnoremap("<leader>gb", ":GitBlameToggle<CR>")

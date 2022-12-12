@@ -73,6 +73,7 @@ return require('packer').startup(function(use)
 
     -- Git
     use 'tpope/vim-fugitive'
+    use 'f-person/git-blame.nvim'
 
     -- Language Support
     use 'rust-lang/rust.vim'
