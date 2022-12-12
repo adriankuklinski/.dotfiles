@@ -7,7 +7,8 @@ lsp.ensure_installed({
     'intelephense',
     'rust_analyzer',
     'sumneko_lua',
-    'go_pls'
+    'gopls',
+    'eslint'
 })
 
 lsp.set_preferences({
@@ -19,6 +20,14 @@ lsp.set_preferences({
     manage_nvim_cmp = true,
     call_servers = 'local',
     sign_icons = {}
+})
+
+lsp.configure('tsserver', {
+    filetypes = {
+        'typescript',
+        'typescriptreact',
+        'typescript.tsx',
+    }
 })
 
 lsp.setup()
