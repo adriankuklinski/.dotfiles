@@ -53,6 +53,9 @@ return require('packer').startup(function(use)
     use 'L3MON4D3/LuaSnip'
     use 'rafamadriz/friendly-snippets'
 
+    -- Copilot
+    use 'github/copilot.vim'
+
     -- Telescope
     use 'ThePrimeagen/harpoon'
     use 'nvim-lua/plenary.nvim'
