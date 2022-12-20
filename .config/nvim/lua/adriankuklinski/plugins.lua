@@ -14,7 +14,7 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    -- Color Scheme
+    -- Asthetics and Colorschemes
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
@@ -40,6 +40,8 @@ return require('packer').startup(function(use)
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
     use 'onsails/lspkind-nvim'
+
+    use {'neoclide/coc.nvim', branch = 'release'}
 
     -- Autocompletion
     use 'hrsh7th/nvim-cmp'
@@ -78,6 +80,10 @@ return require('packer').startup(function(use)
     -- Language Support
     use 'rust-lang/rust.vim'
     use {'fatih/vim-go', run =  ':GoUpdateBinaries'}
+
+    -- Misc
+    use 'mbbill/undotree'
+    use 'ThePrimeagen/vim-be-good'
 
     if packer_bootstrap then
         require('packer').sync()
