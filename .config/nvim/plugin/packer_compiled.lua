@@ -114,11 +114,6 @@ _G.packer_plugins = {
     path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["copilot.vim"] = {
-    loaded = true,
-    path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -154,6 +149,26 @@ _G.packer_plugins = {
     path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-ui"] = {
+    loaded = true,
+    path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    url = "https://github.com/rcarriga/nvim-dap-ui"
+  },
+  ["nvim-dap-virtual-text"] = {
+    loaded = true,
+    path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
+    url = "https://github.com/theHamsta/nvim-dap-virtual-text"
+  },
+  ["nvim-jira-lens"] = {
+    loaded = true,
+    path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/nvim-jira-lens",
+    url = "https://github.com/adriankuklinski/nvim-jira-lens"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -179,6 +194,11 @@ _G.packer_plugins = {
     path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/playground",
     url = "https://github.com/nvim-treesitter/playground"
   },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
   ["refactoring.nvim"] = {
     loaded = true,
     path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/refactoring.nvim",
@@ -189,6 +209,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
+  },
+  ["telescope-dap.nvim"] = {
+    loaded = true,
+    path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
+    url = "https://github.com/nvim-telescope/telescope-dap.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/adriankuklinski/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["trouble.nvim"] = {
     config = { "\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0" },

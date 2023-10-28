@@ -21,6 +21,10 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+    -- my plugins
+    use ("adriankuklinski/nvim-jira-lens")
+
+    -- asthetics
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
@@ -52,16 +56,22 @@ return require('packer').startup(function(use)
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
     use("nvim-treesitter/nvim-treesitter-context");
+
+    -- debug
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use 'theHamsta/nvim-dap-virtual-text'
+    use 'nvim-telescope/telescope-dap.nvim'
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
         requires = {
-            -- LSP Support
+            -- lsp support
             {'neovim/nvim-lspconfig'},
             {'williamboman/mason.nvim'},
             {'williamboman/mason-lspconfig.nvim'},
 
-            -- Autocompletion
+            -- autocompletion
             {'hrsh7th/nvim-cmp'},
             {'hrsh7th/cmp-buffer'},
             {'hrsh7th/cmp-path'},
@@ -69,17 +79,19 @@ return require('packer').startup(function(use)
             {'hrsh7th/cmp-nvim-lsp'},
             {'hrsh7th/cmp-nvim-lua'},
 
-            -- Snippets
+            -- snippets
             {'L3MON4D3/LuaSnip'},
             {'rafamadriz/friendly-snippets'},
         }
     }
+
     use("folke/zen-mode.nvim")
-    use("github/copilot.vim")
+    -- use("github/copilot.vim")
     use("eandrju/cellular-automaton.nvim")
     use("laytan/cloak.nvim")
     use 'stephpy/vim-php-cs-fixer'
     use 'f-person/git-blame.nvim'
+
 
     if packer_bootstrap then
         require('packer').sync()
